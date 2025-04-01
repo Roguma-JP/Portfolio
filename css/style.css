@@ -501,18 +501,26 @@ Body
 }
 
 @media screen and (min-width:769px) {
+    .section__txt {
+        margin: 15px 0;
+    }
+
     .section--spac {
         padding: 150px 0;
     }
 
     .spac {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         max-width: 1280px;
         margin: 0 auto;
     }
 
     .spac__box {
-        margin-right: 40px;
+        margin: 0 0 40px 0;
+        width: 32%;
+        height: 322px;
     }
 
     .spac__box:nth-of-type(2),
@@ -572,6 +580,12 @@ Body
         padding: 0;
     }
 
+    .slick-slide,
+    .slick-center {
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
     .slick-slider {
         max-width: 1280px;
         margin: 0 auto;
@@ -590,6 +604,11 @@ Body
         margin-right: auto !important;
     }
 
+    .slick-slider__banner {
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
     .slick-slide {
         display: flex !important;
         justify-content: center;
@@ -598,12 +617,20 @@ Body
         /* optional */
         transform: scale(0.9);
         opacity: 0.4;
+        overflow: hidden;
+        border-radius: 12px;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
+    .slick-slide>div {
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
     .slick-slide img {
-        height: 260px;
-        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 12px;
     }
 
@@ -611,6 +638,26 @@ Body
         transform: scale(1.1) !important;
         opacity: 1 !important;
         z-index: 2;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .slick-slide,
+    .slick-center,
+    .slick-slider__banner,
+    .slick-slide>div {
+        height: 260px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
     }
 }
 
@@ -681,6 +728,7 @@ Body
     height: 50px;
     z-index: 100;
     transition: opacity 0.3s ease;
+
 }
 
 #topBtn.hidden {
@@ -697,17 +745,24 @@ Body
 .topBtn img {
     width: 100%;
     height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 @media screen and (min-width:769px) {
+
     .map {
         max-width: 1280px;
         height: 441px;
+        margin: 0 auto;
     }
 
     .access {
+        max-width: 1280px;
         display: flex;
         gap: 44px;
+        margin: 0 auto;
+        padding: 0;
+
     }
 
     .section__topic--access {
