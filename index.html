@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -21,7 +20,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="header__box">
             <img class="header__btn" src="images/icon_list.svg" alt="">
             <img class="header__btn2" src="images/cart_icon.svg" alt="">
@@ -153,19 +152,23 @@
                 <p class="section__txt">近くの店でLAMIに会える！</p>
                 <div class="section__inner">
                     <div class="slick-slider">
-                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=tTRL8sF9Tf0" target="_blank" rel="noopener"><img
-                                    src="images/thunb_youtube.jpg" alt="Slide 1"></a></div>
-                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=k1VvUsP4p5w" target="_blank" rel="noopener"><img
-                                    src="images/thunb_youtube_2.jpg" alt="Slide 2"></a></div>
-                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=MVX1jcWD_i4" target="_blank" rel="noopener"><img
-                                    src="images/thunb_youtube_3.jpg" alt="Slide 3"></a></div>
-                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=i-eTluVjXVo" target="_blank" rel="noopener"><img
-                                    src="images/thunb_youtube_4.jpg" alt="Slide 3"></a></div>
+                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=tTRL8sF9Tf0"
+                                target="_blank" rel="noopener"><img src="images/thunb_youtube.jpg" alt="Slide 1"></a>
+                        </div>
+                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=k1VvUsP4p5w"
+                                target="_blank" rel="noopener"><img src="images/thunb_youtube_2.jpg" alt="Slide 2"></a>
+                        </div>
+                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=MVX1jcWD_i4"
+                                target="_blank" rel="noopener"><img src="images/thunb_youtube_3.jpg" alt="Slide 3"></a>
+                        </div>
+                        <div class="slick-slider__banner"><a href="https://www.youtube.com/watch?v=i-eTluVjXVo"
+                                target="_blank" rel="noopener"><img src="images/thunb_youtube_4.jpg" alt="Slide 3"></a>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="section section--access">
-                <h3 class="section__topic">Access</h3>
+                <h3 class="section__topic section__topic--access">Access</h3>
                 <p class="section__txt">近くの店でLAMIに会える！</p>
                 <iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9569220204808!2d126.91894418885497!3d37.5560787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c999f6eb8c605%3A0x7e3e628400a5f42a!2z7ZmN64yA7KCE64u0!5e0!3m2!1sko!2sjp!4v1740490768219!5m2!1sko!2sjp"
@@ -212,16 +215,17 @@
                     <li class="menu__item"><a href="">イベント</a></li>
                 </ul>
             </nav>
-            <small class="copy">Copyright © VAPELIT 2025 All rights reserved</small>
+        </div>
+        <small class="copy">Copyright © VAPELIT 2025 All rights reserved</small>
+        <div id="topBtn" class="topBtn">
+            <a href="#header"><img src="images/top.svg" alt=""></a>
         </div>
     </footer>
     <!-- footer end -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

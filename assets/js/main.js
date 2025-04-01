@@ -122,17 +122,17 @@ $(document).ready(function () {
     ]
   });
 });
-// 매장 클릭 시 지도 변경
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const mapFrame = document.querySelector(".map");
   const accessBoxes = document.querySelectorAll(".access_box");
 
   const mapLinks = [
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9569220204808!2d126.91894418885497!3d37.5560787!...",
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.626583643525!2d126.98054566095344!3d37.5638606...",
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12650.506415588916!2d126.97279401708684!3d37.5638601...",
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.423665055676!2d128.07887976083057!3d35.1959146..."
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.4784610102404!2d126.9223559587219!3d37.5560787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c999f6eb8c605%3A0x7e3e628400a5f42a!2z7ZmN64yA7KCE64u0!5e0!3m2!1sko!2sjp!4v1743519170325!5m2!1sko!2sjp",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6325.419568217624!2d126.98002293488769!3d37.5619008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca33c00a5e129%3A0xcf8b2b8c1f62d00e!2z64m067mE7KCE7J6Q64u067CwKE5FV0IgVkFQRSBTSE9QKQ!5e0!3m2!1sko!2sjp!4v1743519464773!5m2!1sko!2sjp",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.2512820948177!2d126.99098!3d37.5727002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca372412a0fb7%3A0x1a522bb7c86b73ed!2z64m067mE7KCE7J6Q64u067Cw!5e0!3m2!1sko!2sjp!4v1743519549179!5m2!1sko!2sjp",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.1101094791616!2d128.08269921431008!3d35.195496720599145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efd9ee1e08f85%3A0x3c43a038129bdc1c!2z64m067mE7J2Y7KCE7J6Q64u067Cw!5e0!3m2!1sko!2sjp!4v1743519772140!5m2!1sko!2sjp"
   ];
 
   accessBoxes.forEach((box, index) => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// 수동 슬라이드 이동 컨트롤
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelector(".slide");
@@ -178,4 +178,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   setInterval(() => moveSlide(slideIndex + 1), 3000);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () { 
+  const topBtn = document.getElementById("topBtn");
+  // トップへスムーズ移動
+  function handleTopBtnClick(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        topBtn.classList.add("hidden");
+  }
+      // トップボタン表示/非表示
+  function handleScroll() {
+    if (window.scrollY === 0) {
+      topBtn.classList.add("hidden");
+    } else {
+      topBtn.classList.remove("hidden");
+    }
+  }
+  if (topBtn) {
+    topBtn.addEventListener("click", handleTopBtnClick);
+    window.addEventListener("scroll", handleScroll);
+  }
 });

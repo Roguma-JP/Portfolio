@@ -94,7 +94,7 @@ header
 
 .nav {
     display: block;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.95);
     width: 100%;
     height: 100vh;
     top: 0;
@@ -107,6 +107,7 @@ header
 
 .nav.active {
     transform: translateX(0);
+
 }
 
 .nav__header {
@@ -228,7 +229,11 @@ Body
 .topMenu__box {
     width: 62px;
     gap: 46px;
+}
 
+.topMenu__box:nth-of-type(2) img,
+.topMenu__box:nth-of-type(3) img {
+    filter: saturate(0);
 }
 
 .topMenu_topic {
@@ -560,9 +565,10 @@ Body
 슬라이드 컨테이너 크기 조정 (1280px)
 ================================*/
 @media screen and (min-width: 769px) {
+
     .section--youtube .section__inner {
         max-width: 1280px;
-        margin: 0 auto;
+        margin: 0 auto 90px;
         padding: 0;
     }
 
@@ -667,6 +673,32 @@ Body
 }
 
 
+.topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+
+#topBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.topBtn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.topBtn img {
+    width: 100%;
+    height: auto;
+}
+
 @media screen and (min-width:769px) {
     .map {
         max-width: 1280px;
@@ -676,6 +708,10 @@ Body
     .access {
         display: flex;
         gap: 44px;
+    }
+
+    .section__topic--access {
+        margin-top: 90px;
     }
 }
 
@@ -705,8 +741,41 @@ Body
 }
 
 .copy {
+    padding: 0 5.3%;
     display: block;
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 20px;
+}
+
+@media screen and (min-width:769px) {
+    .footer {
+        padding: 0 0 90px 0;
+    }
+
+    .footer__group {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 90px 0 50px;
+
+
+    }
+
+    .menu__list {
+        margin-top: 0;
+        display: flex;
+        gap: 32px;
+    }
+
+    .copy {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+
+    }
+
 }
